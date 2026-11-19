@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>慢行者｜打字很慢，但可以走得很遠</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:image" content="https://lamasonic2020-cloud.github.io/slowwalker/logo.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;900&display=swap">
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;font-family:'Noto Sans TC',system-ui,sans-serif;color:#E8F2EA;background:#030504}
 h1,h2{font-family:'Noto Serif TC','Noto Sans TC',serif}
 a{color:#5FD98A}a:hover{color:#8BEAAB}
+.hero{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);grid-template-areas:"text logo";align-items:center;gap:32px}
+.hero-text{grid-area:text;min-width:0}
+.hero-logo{grid-area:logo;width:100%;height:auto;display:block}
+@media (max-width:860px){.hero{grid-template-columns:1fr;grid-template-areas:"logo" "text";gap:28px}.hero-logo{width:min(64vw,300px)}}
 .course-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:14px}
 .course-list li{display:flex;gap:18px;align-items:flex-start;background:#0B1A12;border:1px solid #1E4A30;border-radius:14px;padding:22px 24px}
 .course-no{flex:none;font-family:'Noto Serif TC',serif;font-size:30px;font-weight:900;line-height:1;color:#5FD98A;min-width:44px}
@@ -32,17 +38,15 @@ a{color:#5FD98A}a:hover{color:#8BEAAB}
 <div style="width: 100%; background: #030504; font-family: 'Noto Sans TC', system-ui, sans-serif; color: #E8F2EA; line-height: 1.6">
 
 <header style="background: #000000; color: #E8F2EA; padding: 112px 24px 104px; position: relative; overflow: hidden">
-<div aria-hidden="true" style="position: absolute; right: -40px; top: 50%; width: 540px; height: 500px; transform: translateY(-50%); opacity: 0.5; pointer-events: none">
-<div style="position: absolute; left: 120px; top: 0; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(0,0,0,0) 48%, rgba(95,217,138,0.5) 100%); box-shadow: 0 0 44px rgba(95,217,138,0.4)"></div>
-<div style="position: absolute; left: 0; top: 190px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(0,0,0,0) 48%, rgba(95,217,138,0.5) 100%); box-shadow: 0 0 44px rgba(95,217,138,0.4)"></div>
-<div style="position: absolute; left: 240px; top: 190px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(0,0,0,0) 48%, rgba(63,182,201,0.5) 100%); box-shadow: 0 0 44px rgba(63,182,201,0.35)"></div>
-</div>
-<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 26px; align-items: flex-start; position: relative">
+<div class="hero">
+<img class="hero-logo" src="logo.jpg" alt="Slow" width="960" height="880">
+<div class="hero-text" style="display: flex; flex-direction: column; gap: 26px; align-items: flex-start">
 <p style="margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.18em; color: #5FD98A">文字 × 私域 × 個人品牌</p>
 <h1 style="margin: 0; font-size: clamp(64px, 11vw, 128px); font-weight: 900; line-height: 1.05">慢行者</h1>
 <p style="margin: 0; font-size: clamp(20px, 2.6vw, 28px); color: #A9C2B1">打字很慢，但可以走得很遠</p>
 <p style="margin: 0; max-width: 720px; font-size: clamp(26px, 3.6vw, 40px); font-weight: 700; line-height: 1.4">不用露臉，不用剪片<br>靠寫文章建立信任<br>一年內推出自己的第一個產品</p>
 <p style="margin: 0; font-size: 18px; color: #A9C2B1">用文字加私域變現，打造你的個人品牌。現在有產品、還沒產品，都照同一條路走</p>
+</div>
 </div>
 </header>
 
