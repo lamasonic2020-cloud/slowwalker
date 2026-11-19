@@ -31,6 +31,15 @@ a{color:#5FD98A}a:hover{color:#8BEAAB}
 #proof-viewer{padding:0;border:0;background:transparent;max-width:min(96vw,1600px);max-height:92vh;overflow:visible}
 #proof-viewer::backdrop{background:rgba(0,0,0,.88)}
 #proof-viewer img{display:block;max-width:100%;max-height:92vh;border-radius:10px}
+.stack{list-style:none;margin:0;padding:0;border:1px solid #1E4A30;border-radius:14px;overflow:hidden;background:#0B1A12}
+.stack li{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap;padding:20px 24px;border-bottom:1px solid #1E4A30}
+.stack li>div{flex:1 1 300px;min-width:0}
+.stack h3{margin:0 0 4px;font-size:19px;font-weight:700}
+.stack p{margin:0;font-size:15px;color:#A9C2B1}
+.stack-value{flex:none;font-size:18px;font-weight:700;color:#5FD98A;white-space:nowrap}
+.stack-total{background:#000;border-bottom:0!important}
+.stack-total h3{font-size:21px}
+.stack-total .stack-value{font-size:24px;color:#E8F2EA}
 .proof-close{position:absolute;top:-14px;right:-14px;width:40px;height:40px;border-radius:50%;border:0;background:#5FD98A;color:#03130A;font-size:26px;line-height:1;cursor:pointer}
 </style>
 </head>
@@ -187,7 +196,28 @@ a{color:#5FD98A}a:hover{color:#8BEAAB}
 <button type="button" class="proof-close" aria-label="關閉">×</button>
 </dialog>
 
-<section id="join" style="background: #000000; color: #E8F2EA; padding: 96px 24px; border-top: 1px solid #1E4A30">
+<section id="value" style="padding: 80px 24px; background: #07110C">
+<div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div>
+<p style="margin: 0 0 8px; font-size: 15px; font-weight: 700; color: #5FD98A; letter-spacing: 0.08em">一年拿到的全部</p>
+<h2 style="margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 900; line-height: 1.25">如果一項一項分開買</h2>
+</div>
+<ul class="stack">
+<li><div><h3>文字課教室 8 個單元</h3><p>從找題目、寫長文、一篇變一週內容，到做出第一個產品</p></div><span class="stack-value">USD 800</span></li>
+<li><div><h3>前 4 週直播帶寫課 × 4 堂</h3><p>駿主講，搭配當週單元現場帶做、現場回答</p></div><span class="stack-value">USD 600</span></li>
+<li><div><h3>一整年的改稿</h3><p>文章貼上來請駿改，寫一篇改一篇</p></div><span class="stack-value">USD 1,200</span></li>
+<li><div><h3>雙週 QA 直播 × 一年約 26 場</h3><p>Cody 回答怎麼把文字變成收入，每場都有回放</p></div><span class="stack-value">USD 1,300</span></li>
+<li><div><h3>每月主題直播課 × 11 場</h3><p>第 2 個月起每月一次，沒跟到可以看重播</p></div><span class="stack-value">USD 550</span></li>
+<li><div><h3>AI 資源庫</h3><p>長文骨架、輪播模板、改稿指令、私訊範例，直接拿去用</p></div><span class="stack-value">USD 300</span></li>
+<li><div><h3>品牌定位＋個人神話故事</h3><p>挖出自己的特質，學會腳本和故事怎麼寫</p></div><span class="stack-value">USD 400</span></li>
+<li><div><h3>每週寫作題目＋作業區互評</h3><p>每週有題目可寫，寫完有同學留言回饋</p></div><span class="stack-value">一起附上</span></li>
+<li class="stack-total"><div><h3>分開買的總價</h3></div><span class="stack-value"><s>USD 5,150</s></span></li>
+</ul>
+<p style="margin: 0; font-size: 18px; color: #A9C2B1">這些全部放在同一個年訂閱裡，早鳥價 USD 1,200，平均一個月 USD 100</p>
+</div>
+</section>
+
+<section id="join"style="background: #000000; color: #E8F2EA; padding: 96px 24px; border-top: 1px solid #1E4A30">
 <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; align-items: flex-start">
 <p style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: 0.08em; color: #5FD98A">早鳥報名中</p>
 <h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 52px); font-weight: 900; line-height: 1.25">12/6 開始，一起慢慢寫</h2>
